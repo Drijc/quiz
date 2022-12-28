@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="ques-div">
+        {% from "_formhelpers.html" import render_field %}
+<form action="" method="POST">
+                {{ form.hidden_tag() }}
+                <div class="register-intro">
+                    <h1>Create your <br>Account now!</h1>
+                    <p>Get unlimited typeforms, questions and responses. <br> Free Forever.</p>
+                </div>
+                   <div class="row align-items-center py-3">
+
+
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Question</h6>
+
+              </div>
+              <div class="col-md-9 pe-5" >
+
+               {{ render_field(form.question)  }}
+
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Option A</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                 {{ render_field(form.optionA)   }}
+
+              </div>
+            </div>
+
+             <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Option B</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                 {{ render_field(form.optionB)  }}
+
+              </div>
+            </div>
+
+             <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Option C</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                 {{ render_field(form.optionC)  }}
+
+              </div>
+            </div>
+             <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Option D</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                 {{ render_field(form.optionD) }}
+
+              </div>
+            </div>
+
+              <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Correct Answer</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                 {{render_field(form.ans)  }}
+
+              </div>
+            </div>
+
+
+              <div class="form-para">
+                    <p>{{ form.submit(class="btn btn-primary") }}</p>
+                </div>
+
+            </form>
+    </div>
+
+
+{% endblock %}
+
